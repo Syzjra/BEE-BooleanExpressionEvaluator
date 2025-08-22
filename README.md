@@ -1,4 +1,4 @@
-# BeeNode Boolean Expression Evaluator
+# BEE Boolean Expression Evaluator
 
 A lightweight Java library to **parse and evaluate arbitrarily nested boolean expressions** and calculate **completion rates** for partially completed items.
 
