@@ -32,19 +32,6 @@ A lightweight Java library to **parse and evaluate arbitrarily nested boolean ex
 
 ---
 
-## Installation
-
-Include the library in your Java project. For example, using Maven:
-
-```xml
-<dependency>
-    <groupId>com.hazdra</groupId>
-    <artifactId>bee-boolean-expression-evaluator</artifactId>
-    <version>1.0.0</version>
-</dependency>
-
-```
-
 Or simply include the core classes directly in your project:
 
 - `BeeNode` – represents a node in the expression tree
@@ -53,31 +40,6 @@ Or simply include the core classes directly in your project:
 - Evaluator – recursively calculates the completion rate for a given set of completed items
 
 ---
-
-## Usage
-
-### Define an expression tree
-
-```java
-
-```
-
-### Evaluate completion
-
-Set<String> completed = Set.of("23", "53");
-BeeResult result = evaluator.evaluate(expr, completed);
-
-System.out.println("Completion rate = " + result.getRate()); // 0.5 → 50%
-
-### Output
-
-- 0.0 → 0% completed
-- 0.5 → 50% completed
-- 1.0 → 100% completed
-
----
-
-
 
 ## License
 
