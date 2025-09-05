@@ -1,4 +1,4 @@
-package main.java.com.hazdra.Bee.models;
+package main.java.com.Syzjra.Bee.models;
 
 final public class BeeNode {
     private BeeNodeType type;

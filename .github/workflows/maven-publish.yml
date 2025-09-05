@@ -1,0 +1,30 @@
+name: Publish package to GitHub Packages
+
+on:
+  push:
+    tags:
+      - 'v*'   # only run when you push tags like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          server-id: github   # must match <id> in your pom.xml
+          settings-path: ${{ github.workspace }}
+
+      - name: Build with Maven
+        run: mvn -B package
+
+      - name: Publish to GitHub Packages
+        run: mvn -B deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
