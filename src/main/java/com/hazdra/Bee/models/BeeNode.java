@@ -4,7 +4,7 @@ final public class BeeNode {
     private BeeNodeType type;
     private BeeNode left;
     private BeeNode right;
-    private String value; // usado só se for VALUE
+    private String value;
 
     public BeeNode(BeeNodeType type, BeeNode left, BeeNode right) {
         this.type = type;
